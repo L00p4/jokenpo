@@ -1,3 +1,61 @@
+body {
+  background-color: #180027; /* fundo roxo escuro */
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 30px;
+  font-family: "Fredoka", sans-serif;
+  font-size: 8rem;
+  color: #c147e9;
+  animation: shadowCycle 2s infinite ease-in-out;
+}
+
+@keyframes shadowCycle {
+  0% {
+    text-shadow: 4px 0 #ff44cc;
+  }
+  33% {
+    text-shadow: 4px 0 #4ffbdf;
+  }
+  66% {
+    text-shadow: 4px 0 #ff6b6b;
+  }
+  100% {
+    text-shadow: 4px 0 #ff44cc;
+  }
+}
+
+/* h1 {
+  margin: 30px;
+  font-family: "Fredoka", sans-serif;
+  font-size: 8rem;
+  color: #c147e9;
+  animation: neonGlow 3s infinite ease-in-out;
+}
+
+@keyframes neonGlow {
+  0% {
+    text-shadow: 0 0 5px #ff44cc, 0 0 10px #ff44cc, 4px 0 #ff44cc;
+  }
+  33% {
+    text-shadow: 0 0 5px #ff6b6b, 0 0 10px #ff6b6b, 4px 0 #ff6b6b;
+  }
+  66% {
+    text-shadow: 0 0 5px #4ffbdf, 0 0 10px #4ffbdf, 4px 0 #4ffbdf;
+  }
+  100% {
+    text-shadow: 0 0 5px #ff44cc, 0 0 10px #ff44cc, 4px 0 #ff44cc;
+  }
+} */
+
+p {
+  font-size: 2rem;
+  color: #e5b8f4; /* lavanda suave */
+  font-family: "Nunito", sans-serif;
+}
+
 .container {
   width: 70%;
   margin: auto;
@@ -7,24 +65,6 @@
 .hand {
   text-align: center;
   display: inline-block;
-}
-
-body {
-  background-color: #393e46;
-}
-
-h1 {
-  margin: 30px;
-  font-family: "Fredoka", sans-serif;
-  text-shadow: 5px 0 #232931;
-  font-size: 8rem;
-  color: #4ecca3;
-}
-
-p {
-  font-size: 2rem;
-  color: #4ecca3;
-  font-family: "Nunito", sans-serif;
 }
 
 img {
