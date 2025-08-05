@@ -1,15 +1,28 @@
+:root {
+  --bg-primary: #180027; /* Fundo principal */
+  --primary-color: #c147e9; /* Cor primária */
+  --secondary-color: #e5b8f4; /* Cor secundária */
+  --accent-pink: #ff44cc; /* Rosa de destaque */
+  --accent-cyan: #4ffbdf; /* Ciano de destaque */
+  --accent-red: #ff6b6b; /* Vermelho de destaque */
+}
+
 body {
-  background-color: #180027; /* fundo roxo escuro */
+  background-color: var(--bg-primary);
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
   margin: 30px;
   font-family: "Fredoka", sans-serif;
-  font-size: 8rem;
-  color: #c147e9;
+  font-size: 6rem;
+  color: var(--primary-color);
   animation: shadowCycle 2s infinite ease-in-out;
+  text-align: center;
 }
 
 @keyframes shadowCycle {
@@ -27,53 +40,177 @@ h1 {
   }
 }
 
-/* h1 {
-  margin: 30px;
-  font-family: "Fredoka", sans-serif;
-  font-size: 8rem;
-  color: #c147e9;
-  animation: neonGlow 3s infinite ease-in-out;
-}
-
-@keyframes neonGlow {
-  0% {
-    text-shadow: 0 0 5px #ff44cc, 0 0 10px #ff44cc, 4px 0 #ff44cc;
-  }
-  33% {
-    text-shadow: 0 0 5px #ff6b6b, 0 0 10px #ff6b6b, 4px 0 #ff6b6b;
-  }
-  66% {
-    text-shadow: 0 0 5px #4ffbdf, 0 0 10px #4ffbdf, 4px 0 #4ffbdf;
-  }
-  100% {
-    text-shadow: 0 0 5px #ff44cc, 0 0 10px #ff44cc, 4px 0 #ff44cc;
-  }
-} */
-
 p {
   font-size: 2rem;
-  color: #e5b8f4; /* lavanda suave */
+  color: #e5b8f4;
   font-family: "Nunito", sans-serif;
+  margin-bottom: 20px;
 }
 
 .container {
-  width: 70%;
+  width: 80%;
+  max-width: 800px;
   margin: auto;
   text-align: center;
+  flex-grow: 1;
+}
+
+.hands-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px 0;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .hand {
   text-align: center;
-  display: inline-block;
+  flex: 1;
+  min-width: 200px;
 }
 
-img {
-  width: 80%;
+.hand img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 10px rgba(193, 71, 233, 0.3));
+}
+
+.hand img:hover {
+  transform: scale(1.1);
+}
+
+.vs-divider {
+  font-size: 3rem;
+  color: #ff44cc;
+  font-family: "Fredoka", sans-serif;
+  margin: 0 20px;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+.play-button {
+  background: linear-gradient(45deg, #ff44cc, var(--primary-color), #4ffbdf);
+  background-size: 300% 300%;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 15px 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: gradientShift 3s infinite;
+  box-shadow: 0 4px 15px rgba(193, 71, 233, 0.4);
+  margin: 30px 0;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.play-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(193, 71, 233, 0.6);
+}
+
+.play-button:active {
+  transform: translateY(0);
+}
+
+.score-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.score {
+  background: rgba(193, 71, 233, 0.2);
+  border: 2px solid var(--primary-color);
+  border-radius: 15px;
+  padding: 15px 25px;
+  color: #e5b8f4;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+  min-width: 120px;
+}
+
+.score-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4ffbdf;
 }
 
 footer {
-  margin-top: 5%;
+  margin-top: auto;
+  padding: 20px;
   color: #eeeeee;
   text-align: center;
   font-family: "Nunito", sans-serif;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.game-rules {
+  background: rgba(193, 71, 233, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px 0;
+  color: #e5b8f4;
+  font-family: "Nunito", sans-serif;
+}
+
+.rules-title {
+  color: #ff44cc;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .hands-container {
+    flex-direction: column;
+  }
+
+  .vs-divider {
+    transform: rotate(90deg);
+    margin: 10px 0;
+  }
+
+  .hand img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .score-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }

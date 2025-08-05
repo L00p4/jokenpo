@@ -13,7 +13,7 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <!-- <body>
     <div class="container">
       <h1>Refresh Me</h1>
 
@@ -29,6 +29,63 @@
     </div>
 
     <footer>link calvo aqui</footer>
+    <script src="index.js" charset="utf-8"></script>
+  </body> -->
+
+  <body>
+    <div class="container">
+      <h1 id="result">Clique em Jogar!</h1>
+
+      <div class="hands-container">
+        <div class="hand">
+          <p>Player 1</p>
+          <img
+            class="img1"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Ccircle cx='75' cy='75' r='70' fill='%23c147e9' opacity='0.3'/%3E%3Ctext x='75' y='85' text-anchor='middle' font-size='60' fill='%23e5b8f4'%3E✋%3C/text%3E%3C/svg%3E"
+            alt="mão jogando jokenpô"
+          />
+        </div>
+
+        <div class="vs-divider">VS</div>
+
+        <div class="hand">
+          <p>Player 2</p>
+          <img
+            class="img2"
+            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Ccircle cx='75' cy='75' r='70' fill='%23c147e9' opacity='0.3'/%3E%3Ctext x='75' y='85' text-anchor='middle' font-size='60' fill='%23e5b8f4'%3E✋%3C/text%3E%3C/svg%3E"
+            alt="mão jogando jokenpô"
+          />
+        </div>
+      </div>
+
+      <button class="play-button" onclick="playGame()">🎮 JOGAR</button>
+
+      <div class="score-container">
+        <div class="score">
+          <div>Player 1</div>
+          <div class="score-number" id="score1">0</div>
+        </div>
+        <div class="score">
+          <div>Empates</div>
+          <div class="score-number" id="scoreTie">0</div>
+        </div>
+        <div class="score">
+          <div>Player 2</div>
+          <div class="score-number" id="score2">0</div>
+        </div>
+      </div>
+
+      <div class="game-rules">
+        <div class="rules-title">Como Jogar:</div>
+        <p>
+          🪨 Pedra vence Tesoura • ✂️ Tesoura vence Papel • 📄 Papel vence Pedra
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <p>🎲 Jokenpô 2025 - Feito com ❤️</p>
+    </footer>
     <script src="index.js" charset="utf-8"></script>
   </body>
 </html>
