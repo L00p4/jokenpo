@@ -149,7 +149,7 @@ Bracket Pair Colorizer - Coloriza parênteses e chaves
 
 ```
 jokenpo/
-├── jokenpo.html        # Interface principal
+├── index.html        # Interface principal
 ├── index.js            # Lógica do jogo
 ├── styles.css          # Estilos e animações
 ├── README.md           # Documentação
