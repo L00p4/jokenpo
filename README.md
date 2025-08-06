@@ -1,4 +1,4 @@
-# 🎮 Jokenpô Game
+# 🎮 Jokenpô
 
 Um jogo clássico de **Pedra, Papel e Tesoura** desenvolvido com HTML, CSS e JavaScript vanilla. Interface moderna com animações, sistema de placar e design responsivo.
 
@@ -19,9 +19,7 @@ Este é um jogo de Jokenpô (Pedra, Papel e Tesoura) totalmente funcional. O pro
 
 ## 🚀 Demo
 
-🔗 **[Jogar Agora](https:...)**
-
-## 📸 Screenshots
+🔗 **[Jogar Agora](https://l00p4.github.io/jokenpo/)**
 
 ### Desktop
 
@@ -87,13 +85,13 @@ Bracket Pair Colorizer - Coloriza parênteses e chaves
 1. **Clone o repositório**
 
    ```bash
-   git clone https://github.com/seuusuario/jokenpo-game.git
+   git clone https://github.com/L00p4/jokenpo.git
    ```
 
 2. **Navegue até o diretório**
 
    ```bash
-   cd jokenpo-game
+   cd jokenpo
    ```
 
 3. **Execute o projeto**
