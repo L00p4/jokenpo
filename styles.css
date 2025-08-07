@@ -10,7 +10,7 @@
 body {
   background-color: var(--bg-primary);
   margin: 0;
-  padding: 0;
+  padding: 2rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -23,6 +23,11 @@ h1 {
   color: var(--primary-color);
   animation: shadowCycle 2s infinite ease-in-out;
   text-align: center;
+}
+
+h1 small,
+#result small {
+  animation: none;
 }
 
 @keyframes shadowCycle {
@@ -48,26 +53,23 @@ p {
 }
 
 .container {
-  width: 80%;
-  max-width: 800px;
-  margin: auto;
+  width: 100%;
   text-align: center;
   flex-grow: 1;
 }
 
 .hands-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  margin: 40px 0;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 3rem;
+  border: 1px solid white;
 }
 
 .hand {
   text-align: center;
-  flex: 1;
-  min-width: 200px;
+  border: 1px solid white;
 }
 
 .hand img {
@@ -86,8 +88,8 @@ p {
   font-size: 3rem;
   color: #ff44cc;
   font-family: "Fredoka", sans-serif;
-  margin: 0 20px;
   animation: pulse 1.5s infinite;
+  border: 1px solid white;
 }
 
 @keyframes pulse {

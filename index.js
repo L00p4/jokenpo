@@ -1,40 +1,14 @@
-// const randomNumber1 = Math.floor(Math.random() * 3);
-// const randomNumber2 = Math.floor(Math.random() * 3);
-
-// const randomImage1 = "images/hand" + randomNumber1 + ".png";
-// const randomImage2 = "images/hand" + randomNumber2 + ".png";
-
-// const image1 = document.querySelectorAll("img")[0];
-// const image2 = document.querySelectorAll("img")[1];
-
-// image1.setAttribute("src", randomImage1);
-// image2.setAttribute("src", randomImage2);
-
-// const resultCode = (randomNumber1 - randomNumber2 + 3) % 3;
-
-// let resultText = "";
-
-// if (resultCode === 0) {
-//   resultText = "Empate!";
-// } else if (resultCode === 1) {
-//   resultText = "Player 1 venceu!";
-// } else {
-//   resultText = "Player 2 venceu!";
-// }
-
-// document.querySelector("h1").textContent = resultText;
-
 // Variáveis para controlar o placar
 let player1Score = 0;
 let player2Score = 0;
 let tieScore = 0;
 
 // Símbolos para cada opção
-const handSymbols = ["🪨", "📄", "✂️"];
+const handSymbols = ["✊", "✋", "✌️"];
 const handNames = ["Pedra", "Papel", "Tesoura"];
 
 function createHandImage(symbol) {
-  return `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Ccircle cx='75' cy='75' r='70' fill='%23c147e9' opacity='0.3'/%3E%3Ctext x='75' y='85' text-anchor='middle' font-size='60' fill='%23e5b8f4'%3E${symbol}%3C/text%3E%3C/svg%3E`;
+  return `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Ccircle cx='75' cy='75' r='70' fill='%23c147e9' opacity='0.3'/%3E%3Ctext x='75' y='75' text-anchor='middle' dominant-baseline='central' font-size='60' fill='%23e5b8f4'%3E${symbol}%3C/text%3E%3C/svg%3E`;
 }
 
 function playGame() {
@@ -63,7 +37,7 @@ function playGame() {
     player1Score++;
     document.getElementById("score1").textContent = player1Score;
   } else {
-    resultText = "🎉 Player 2 Venceu!";
+    resultText = "Player 2 Venceu! 🎉";
     player2Score++;
     document.getElementById("score2").textContent = player2Score;
   }
