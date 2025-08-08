@@ -43,8 +43,10 @@ function playGame() {
   }
 
   // Mostrar o resultado detalhado
-  const detailedResult = `${resultText}<br><small style="font-size: 2rem; opacity: 0.8;">${handNames[randomNumber1]} vs ${handNames[randomNumber2]}</small>`;
-  document.getElementById("result").innerHTML = detailedResult;
+  document.getElementById("result").textContent = resultText;
+  document.getElementById(
+    "result-detail"
+  ).textContent = `${handNames[randomNumber1]} vs ${handNames[randomNumber2]}`;
 
   // Adicionar efeito de animação nas imagens
   image1.style.transform = "scale(1.2)";

@@ -11,7 +11,6 @@ body {
   background-color: var(--bg-primary);
   margin: 0;
   padding: 2rem;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -25,24 +24,12 @@ h1 {
   text-align: center;
 }
 
-h1 small,
-#result small {
-  animation: none;
-}
-
-@keyframes shadowCycle {
-  0% {
-    text-shadow: 4px 0 #ff44cc;
-  }
-  33% {
-    text-shadow: 4px 0 #4ffbdf;
-  }
-  66% {
-    text-shadow: 4px 0 #ff6b6b;
-  }
-  100% {
-    text-shadow: 4px 0 #ff44cc;
-  }
+h2.result-detail {
+  font-family: "Nunito", sans-serif;
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  opacity: 0.8;
+  text-align: center;
 }
 
 p {
@@ -50,6 +37,15 @@ p {
   color: #e5b8f4;
   font-family: "Nunito", sans-serif;
   margin-bottom: 20px;
+}
+
+footer {
+  margin-top: auto;
+  padding: 20px;
+  color: #eeeeee;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .container {
@@ -64,12 +60,10 @@ p {
   align-items: center;
   flex-wrap: wrap;
   gap: 3rem;
-  border: 1px solid white;
 }
 
 .hand {
   text-align: center;
-  border: 1px solid white;
 }
 
 .hand img {
@@ -85,23 +79,10 @@ p {
 }
 
 .vs-divider {
-  font-size: 3rem;
+  font-size: 4rem;
   color: #ff44cc;
   font-family: "Fredoka", sans-serif;
   animation: pulse 1.5s infinite;
-  border: 1px solid white;
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.7;
-    transform: scale(1.1);
-  }
 }
 
 .play-button {
@@ -119,18 +100,6 @@ p {
   animation: gradientShift 3s infinite;
   box-shadow: 0 4px 15px rgba(193, 71, 233, 0.4);
   margin: 30px 0;
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 .play-button:hover {
@@ -165,15 +134,6 @@ p {
   font-size: 2rem;
   font-weight: 700;
   color: #4ffbdf;
-}
-
-footer {
-  margin-top: auto;
-  padding: 20px;
-  color: #eeeeee;
-  text-align: center;
-  font-family: "Nunito", sans-serif;
-  background: rgba(0, 0, 0, 0.2);
 }
 
 .game-rules {
@@ -214,5 +174,44 @@ footer {
   .score-container {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+@keyframes shadowCycle {
+  0% {
+    text-shadow: 4px 0 #ff44cc;
+  }
+  33% {
+    text-shadow: 4px 0 #4ffbdf;
+  }
+  66% {
+    text-shadow: 4px 0 #ff6b6b;
+  }
+  100% {
+    text-shadow: 4px 0 #ff44cc;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
   }
 }
